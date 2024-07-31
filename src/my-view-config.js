@@ -1,70 +1,98 @@
 export const myViewConfig = {
-    version: "1.0.4",
-    name: "My example config",
-    description: "This demonstrates the JSON schema",
-    datasets: [
-      {
-        uid: "D1",
-        name: "Dries",
-        files: [
+    "name": "Test Pancreatlas OMICS vieweer",
+    "version": "1.0.4",
+    "description": "",
+    "datasets": [
           {
-            url: "https://data-1.vitessce.io/0.0.31/master_release/dries/dries.cells.json",
-            type: "cells",
-            fileType: "cells.json"
-          },
-          {
-            url: "https://data-1.vitessce.io/0.0.31/master_release/dries/dries.cell-sets.json",
-            type: "cell-sets",
-            fileType: "cell-sets.json"
+              "uid": "A", 
+              "name": "Dani-Mouse-ChP-snRNAseq", 
+              "files": [
+                  {
+                      "fileType": "anndata.zarr", 
+                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Elgamal_et_al_Diabetes_2023.small.ome.zarr/", 
+                      "options": {
+                          "obsEmbedding": [
+                              {
+                                  "path": "obsm/X_umap", 
+                                  "dims": [0, 1], 
+                                  "embeddingType": "UMAP"
+                              }, 
+                              {
+                                  "path": "obsm/X_pca", 
+                                  "dims": [0, 1],
+                                  "embeddingType": "PCA"
+                              }
+                          ], 
+                          "obsSets": [
+                              {
+                                  "name": "CellType", 
+                                  "path": "obs/CellType"
+                              }
+                          ],
+                          "obsFeatureMatrix": {
+                              "path": "X"
+                          }
+                      }
+                  }
+              ]
           }
-        ]
-      }
-    ],
-    coordinationSpace: {
-      dataset: {
-        A: "D1"
-      },
-      embeddingType: {
-        A: "UMAP",
-        B: "t-SNE"
-      },
-      embeddingZoom: {
-        A: 2.5
-      }
-    },
-    layout: [
-      {
-        component: "scatterplot",
-        coordinationScopes: {
-          dataset: "A",
-          embeddingType: "A",
-          embeddingZoom: "A"
-        },
-        x: 6, y: 0, w: 6, h: 6
-      },
-      {
-        component: "scatterplot",
-        coordinationScopes: {
-          dataset: "A",
-          embeddingType: "B",
-          embeddingZoom: "A"
-        },
-        x: 0, y: 0, w: 6, h: 6
-      },
-      {
-        component: "cellSets",
-        coordinationScopes: {
-          dataset: "A"
-        },
-        x: 0, y: 6, w: 6, h: 6
-      },
-      {
-        component: "cellSetSizes",
-        coordinationScopes: {
-          dataset: "A"
-        },
-        x: 6, y: 6, w: 6, h: 6
-      }
-    ],
-    initStrategy: "auto"
-  };
+      ], 
+      "coordinationSpace": {
+          "dataset": {"A": "A"}, 
+          "embeddingType": {"A": "UMAP"}
+      }, 
+      "layout": [
+          {
+              "component": "scatterplot", 
+              "coordinationScopes": {
+                  "dataset": "A", 
+                  "embeddingType": "A"
+              }, 
+              "x": 0.0, 
+              "y": 0.0, 
+              "w": 8.0, 
+              "h": 8.0
+          }, 
+          {
+              "component": "obsSets", 
+              "coordinationScopes": {
+                  "dataset": "A"
+              }, 
+              "x": 8.0, 
+              "y": 0.0, 
+              "w": 4.0, 
+              "h": 4.0
+          }, 
+          {
+              "component": "featureList", 
+              "coordinationScopes": {
+                  "dataset": "A"
+              }, 
+              "x": 8.0, 
+              "y": 4.0, 
+              "w": 4.0, 
+              "h": 4.0
+          }, 
+          {
+              "component": "obsSetFeatureValueDistribution", 
+              "coordinationScopes": {
+                  "dataset": "A"
+              }, 
+              "x": 6.0, 
+              "y": 8.0, 
+              "w": 6.0, 
+              "h": 4.0
+          }, 
+          {
+              "component": "obsSetSizes", 
+              "coordinationScopes": {
+                  "dataset": "A"
+              }, 
+              "x": 0.0, 
+              "y": 8.0, 
+              "w": 6.0, 
+              "h": 4.0
+          }
+      ], 
+      "initStrategy": "auto"
+  }         
