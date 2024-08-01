@@ -1,11 +1,11 @@
 export const myViewConfig = {
-    "name": "Test Pancreatlas OMICS vieweer",
+    "name": "Vittesce OMICS vieweer",
     "version": "1.0.4",
     "description": "",
     "datasets": [
           {
               "uid": "A", 
-              "name": "Dani-Mouse-ChP-snRNAseq", 
+              "name": "Elgamal et al, Diabetes 2023", 
               "files": [
                   {
                       "fileType": "anndata.zarr", 
