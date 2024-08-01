@@ -5,7 +5,7 @@ export const myViewConfig = {
     "datasets": [
           {
               "uid": "A", 
-              "name": "Tritschler et al, Mol Met 20223", 
+              "name": "Tritschler et al, Mol Met 2023", 
               "files": [
                   {
                       "fileType": "anndata.zarr", 
