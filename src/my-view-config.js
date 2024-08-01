@@ -1,15 +1,15 @@
 export const myViewConfig = {
-    "name": "Vittesce OMICS vieweer",
+    "name": "Tritschler_et_al_MolMet_2022",
     "version": "1.0.4",
     "description": "",
     "datasets": [
           {
               "uid": "A", 
-              "name": "Elgamal et al, Diabetes 2023", 
+              "name": "Tritschler et al, Mol Met 20223", 
               "files": [
                   {
                       "fileType": "anndata.zarr", 
-                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Elgamal_et_al_Diabetes_2023.small.ome.zarr/", 
+                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Tritschler_et_al_MolMet_2022.opt.ome.zarr/", 
                       "options": {
                           "obsEmbedding": [
                               {
