@@ -1,6 +1,6 @@
 export const myViewConfig = {
-    "name": "Tritschler_et_al_MolMet_2022",
-    "version": "1.0.4",
+    "name": "PanKbase scRNA-Seq - Vitessce OMICS vieweer",
+    "version": "1.0.15",
     "description": "",
     "datasets": [
           {
@@ -27,7 +27,24 @@ export const myViewConfig = {
                               {
                                   "name": "CellType", 
                                   "path": "obs/cell_type"
+                              },
+                              {
+                                "name": "Disease Status", 
+                                "path": "obs/disease"
+                              },
+                              {
+                                "name": "Sex", 
+                                "path": "obs/sex"
+                              },
+                              {
+                                "name": "Ethnicity", 
+                                "path": "obs/self_reported_ethnicity"
+                              },
+                              {
+                                "name": "BMI", 
+                                "path": "obs/BMI"
                               }
+                            
                           ],
                           "obsFeatureMatrix": {
                               "path": "X"
@@ -38,11 +55,11 @@ export const myViewConfig = {
           }
       ], 
       "coordinationSpace": {
-          "dataset": {"A": "A"}, 
-          "embeddingType": {"A": "UMAP"}
-      }, 
+        "dataset": {"A": "A"}, 
+        "embeddingType": {"A": "UMAP", "B": "PCA"}
+    },
       "layout": [
-          {
+        {
               "component": "scatterplot", 
               "coordinationScopes": {
                   "dataset": "A", 
