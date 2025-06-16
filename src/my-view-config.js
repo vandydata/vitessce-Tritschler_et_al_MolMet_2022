@@ -26,7 +26,7 @@ export const myViewConfig = {
                           "obsSets": [
                               {
                                   "name": "CellType", 
-                                  "path": "obs/CellType"
+                                  "path": "obs/cell_type"
                               }
                           ],
                           "obsFeatureMatrix": {
