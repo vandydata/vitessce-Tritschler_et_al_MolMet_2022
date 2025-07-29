@@ -9,7 +9,7 @@ export const myViewConfig = {
               "files": [
                   {
                       "fileType": "anndata.zarr", 
-                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Tritschler_et_al_MolMet_2022.opt.ome.zarr/", 
+                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Tritschler_et_al_MolMet_2022_human_islets.20250729.zarr/", 
                       "options": {
                           "obsEmbedding": [
                               {
@@ -26,7 +26,7 @@ export const myViewConfig = {
                           "obsSets": [
                               {
                                   "name": "CellType", 
-                                  "path": "obs/CellType"
+                                  "path": "obs/cell_type"
                               },
                               {
                                 "name": "Disease Status", 
