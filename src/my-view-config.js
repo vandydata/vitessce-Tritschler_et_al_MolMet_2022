@@ -1,4 +1,4 @@
-{
+export const myViewConfig = {
     "name": "Tritschler_et_al_MolMet_2022",
     "version": "1.0.4",
     "description": "",
