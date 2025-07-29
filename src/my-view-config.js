@@ -1,15 +1,15 @@
-export const myViewConfig = {
-    "name": "PanKbase scRNA-Seq - Vitessce OMICS vieweer",
-    "version": "1.0.15",
+{
+    "name": "Tritschler_et_al_MolMet_2022",
+    "version": "1.0.4",
     "description": "",
     "datasets": [
           {
               "uid": "A", 
-              "name": "Tritschler et al, Mol Met 2023", 
+              "name": "Tritschler et al, Mol Met 2022", 
               "files": [
                   {
                       "fileType": "anndata.zarr", 
-                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Tritschler_et_al_MolMet_2022_human_islets.zarr/", 
+                      "url": "https://cds-pancreatlas-public.s3.amazonaws.com/Tritschler_et_al_MolMet_2022.opt.ome.zarr/", 
                       "options": {
                           "obsEmbedding": [
                               {
@@ -26,7 +26,7 @@ export const myViewConfig = {
                           "obsSets": [
                               {
                                   "name": "CellType", 
-                                  "path": "obs/cell_type"
+                                  "path": "obs/CellType"
                               },
                               {
                                 "name": "Disease Status", 
@@ -44,7 +44,6 @@ export const myViewConfig = {
                                 "name": "BMI", 
                                 "path": "obs/BMI"
                               }
-                            
                           ],
                           "obsFeatureMatrix": {
                               "path": "X"
@@ -55,11 +54,11 @@ export const myViewConfig = {
           }
       ], 
       "coordinationSpace": {
-        "dataset": {"A": "A"}, 
-        "embeddingType": {"A": "UMAP", "B": "PCA"}
-    },
+          "dataset": {"A": "A"}, 
+          "embeddingType": {"A": "UMAP"}
+      }, 
       "layout": [
-        {
+          {
               "component": "scatterplot", 
               "coordinationScopes": {
                   "dataset": "A", 
